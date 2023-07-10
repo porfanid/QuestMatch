@@ -19,7 +19,7 @@ jobs:
           node-version: '14'
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm build
         working-directory: ./FrontEnd/front-end
 
       - name: Build Vue.js App
