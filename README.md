@@ -1,6 +1,6 @@
 # QuestMatch
 
-[![Donate](images/pleasedonate.png)](https://revolut.me/pavlosorfanidis)
+[<img src="images/pleasedonate.png" alt="Donate" width="100">](https://revolut.me/pavlosorfanidis)
 
 Welcome to QuestMatch, an app that will be used to create matches for DnD(Dungeons and Dragons) campaigns.
 
