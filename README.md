@@ -1,6 +1,10 @@
 # QuestMatch
 
+[![Donate](images/pleasedonate.png)](https://revolut.me/pavlosorfanidis)
+
 Welcome to QuestMatch, an app that will be used to create matches for DnD(Dungeons and Dragons) campaigns.
+
+> **Warning:** This app is under development and is not yet online. You can contribute to it and as soon as there iss some development, I will upload it.
 
 ## Steps to use the app
 
