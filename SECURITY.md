@@ -2,10 +2,28 @@
 
 ## Reporting a Vulnerability
 
-Whenever you find a Vulneraability you are to report it by creating an issue and describing the vulnerability you find.
+If you discover a security vulnerability within this project, please follow these steps to responsibly disclose it:
 
-If the vulnerability is accepted, a contributor will work on it to get it fixed as soon as possible. The issue will be answered by giving an estimation of the time it will take for the issue to be fixed.
+1. **Do not create a public GitHub issue** for the vulnerability.
+2. Send an email to our security team at [security@example.com](mailto:security@example.com) to report the vulnerability.
+3. Provide detailed information about the vulnerability, including steps to reproduce and any proof-of-concept code or examples.
 
-That is of course if the issue is not lbeled as wontfix. If it is labeled like that, it will be ignored but an answer will be given as to why this issue is ignored
+Our security team will review your report and respond to you as soon as possible. We appreciate your contribution to the security of this project.
 
-In any case, the issue will be answered as soon as possible.
+## Security Updates
+
+We are committed to addressing security vulnerabilities promptly and releasing updates to keep the project secure. The following sections outline our approach to security updates:
+
+- We maintain a responsible disclosure process as described above.
+- We prioritize fixing security vulnerabilities based on their severity and impact.
+- Security updates are released as soon as possible after a vulnerability has been identified and validated.
+- Updates are made available through code patches, new releases, or other appropriate means.
+- We strive to provide clear and actionable information about security updates, including release notes and documentation.
+
+
+
+## Reporting Security Issues
+
+If you have any security concerns or issues regarding this project, please follow the instructions in the "Reporting a Vulnerability" section above.
+
+We appreciate your help in improving the security of this project. Thank you for your contributions and cooperation.
