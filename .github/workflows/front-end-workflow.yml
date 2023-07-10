@@ -27,6 +27,7 @@ jobs:
         working-directory: ./FrontEnd/front-end
 
       - name: Deploy to Firebase Hosting
+      working-directory: ./FrontEnd
         run: |
           echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUESTMATCH2023 }}" > service-account-key.json
           export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/service-account-key.json
