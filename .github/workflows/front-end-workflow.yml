@@ -28,9 +28,9 @@ jobs:
 
       - name: Deploy to Firebase Hosting
         working-directory: ./FrontEnd
-        run: |
-          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUESTMATCH2023 }}" > service-account-key.json
-          export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/service-account-key.json
-          npm install -g firebase-tools
-          npx firebase deploy --only hosting
-
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUESTMATCH2023 }}"
+          projectId: questmatch2023
+          channelId: live
+          entryPoint: "./FrontEnd/front-end/dist"
