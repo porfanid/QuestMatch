@@ -25,8 +25,7 @@ jobs:
       - name: Build Vue.js App
         run: npm run build
         working-directory: ./FrontEnd/front-end
-
-      - uses: ./FrontEnd
+      - uses: FirebaseExtended/action-hosting-deploy@v1
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUESTMATCH2023 }}"
