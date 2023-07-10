@@ -26,9 +26,7 @@ jobs:
         run: npm run build
         working-directory: ./FrontEnd/front-end
 
-      - name: Deploy to Firebase Hosting
-        working-directory: ./FrontEnd
-        uses: ./FrontEnd/front-end/
+      - uses: ./FrontEnd/front-end/
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUESTMATCH2023 }}"
