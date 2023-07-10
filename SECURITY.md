@@ -5,7 +5,7 @@
 If you discover a security vulnerability within this project, please follow these steps to responsibly disclose it:
 
 1. **Do not create a public GitHub issue** for the vulnerability.
-2. Send an email to our security team at [security@example.com](mailto:security@example.com) to report the vulnerability.
+2. Send an email to our security team at [pavlos@orfanidis.net.gr](mailto:pavlos@orfanidis.net.gr) to report the vulnerability.
 3. Provide detailed information about the vulnerability, including steps to reproduce and any proof-of-concept code or examples.
 
 Our security team will review your report and respond to you as soon as possible. We appreciate your contribution to the security of this project.
