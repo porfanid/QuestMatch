@@ -1,4 +1,4 @@
-name: Build and Deploy Vue.js App
+name: Backend Deployment
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main  # Modify this branch name if needed
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,13 +20,8 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        working-directory: ./FrontEnd/front-end
+        working-directory: ./BackEnd
 
-      - name: Build Vue.js App
-        run: npm run build
-        working-directory: ./FrontEnd/front-end
-        
-        
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -34,4 +29,5 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUESTMATCH2023 }}"
           projectId: questmatch2023
           channelId: live
-          entryPoint: "./FrontEnd"
+          entryPoint: "./BackEnd"
+
