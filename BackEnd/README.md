@@ -1,4 +1,5 @@
 # QuestMatch
+![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg)
 
 [<img src="../images/pleasedonate.png" alt="Donate" width="100">](https://revolut.me/pavlosorfanidis)
 

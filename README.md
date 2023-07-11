@@ -1,4 +1,6 @@
 # QuestMatch
+![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20Vue.js%20App/badge.svg) &nbsp;&nbsp;&nbsp; ![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg)
+
 ![Answer the call](images/QuestMatch.png)
 
 [<img src="images/pleasedonate.png" alt="Donate" width="100">](https://revolut.me/pavlosorfanidis)
