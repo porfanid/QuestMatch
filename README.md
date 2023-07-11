@@ -9,7 +9,7 @@
 
 
 [![Issues][issues-shield]][issues-url]
-![Open Pull Requests](https://img.shields.io/github/issues-pr/porfanid/QuestMatch.svg?style=for-the-badge)[![Contributors][contributors-shield]][contributors-url]
+[![Open Pull Requests](https://img.shields.io/github/issues-pr/porfanid/QuestMatch.svg?style=for-the-badge)](https://github.com/porfanid/QuestMatch/pulls)[![Contributors][contributors-shield]][contributors-url]
 
 &nbsp;&nbsp;&nbsp;
 
@@ -88,7 +88,7 @@ ure, new design etc are welcome.
 [contributors-url]: https://github.com/porfanid/QuestMatch/graphs/contributors
 
 [issues-shield]: https://img.shields.io/github/issues/porfanid/QuestMatch.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]: https://github.com/porfanid/QuestMatch/issues
 
 [license-shield]: https://img.shields.io/github/license/porfanid/QuestMatch.svg?style=for-the-badge
 [license-url]: https://github.com/porfanid/QuestMatch/blob/master/LICENSE.md
