@@ -1,7 +1,7 @@
 # QuestMatch
-![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg)
+![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg)&nbsp;![Firebase Status](https://img.shields.io/badge/Firebase-Active-brightgreen.svg)
 
-[<img src="../images/pleasedonate.png" alt="Donate" width="100">](https://revolut.me/pavlosorfanidis)
+![License](https://img.shields.io/github/license/porfanid/QuestMatch)  ![Node.js Version](https://img.shields.io/badge/Node.js-18.16.0-brightgreen.svg)  ![npm Version](https://img.shields.io/badge/npm-9.6.6-red.svg)
 
 ## BackEnd
 

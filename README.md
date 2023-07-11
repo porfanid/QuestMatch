@@ -5,11 +5,11 @@
 
 &nbsp;&nbsp;&nbsp;
 
-![License](https://img.shields.io/github/license/porfanid/QuestMatch)  ![Node.js Version](https://img.shields.io/badge/Node.js-18.16.0-brightgreen.svg)  ![npm Version](https://img.shields.io/badge/npm-9.6.6-red.svg)
+![License](https://img.shields.io/github/license/porfanid/QuestMatch?style=for-the-badge)  ![Node.js Version](https://img.shields.io/badge/Node.js-18.16.0-brightgreen.svg?style=for-the-badge)  ![npm Version](https://img.shields.io/badge/npm-9.6.6-red.svg?style=for-the-badge)
 
 
-![Open Issues](https://img.shields.io/github/issues/porfanid/QuestMatch.svg)
-![Open Pull Requests](https://img.shields.io/github/issues-pr/porfanid/QuestMatch.svg)![Contributors](https://img.shields.io/github/contributors/porfanid/QuestMatch)
+[![Issues][issues-shield]][issues-url]
+![Open Pull Requests](https://img.shields.io/github/issues-pr/porfanid/QuestMatch.svg?style=for-the-badge)[![Contributors][contributors-shield]][contributors-url]
 
 &nbsp;&nbsp;&nbsp;
 
@@ -41,13 +41,60 @@ Welcome to QuestMatch, an app that will be used to create matches for DnD(Dungeo
 
 ## Programming languages that will be used
 
+
+This section should list any m?style=for-the-badgeajor frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+<!--* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
+* [![Vue][Vue.js]][Vue-url]
+* [![Angular][Angular.io]][Angular-url]
+* [![Svelte][Svelte.dev]][Svelte-url]
+* [![Laravel][Laravel.com]][Laravel-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JQuery][JQuery.com]][JQuery-url]
+-->
+
 Since I will be using firebase to host the app, the front end will be madde using firebase hosting and the backend using firebase functions.
 
-1. Back End: Nodejs as this is the programming language formally suportd by Google to create firebase functions.
-2. Front End: Vuejs as it is simple and can be used to create a real time application.
+1. Back End:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[![Node][Node.js]][Node-url]
+
+Nodejs as this is the programming language formally suportd by Google to create firebase functions.
+
+2. Front End:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[![Vue][Vue.js]][Vue-url]
+
+Vuejs as it is simple and can be used to create a real time application.
 
 Please write clean code and insert comments so that other users can see what you have been doing and continue to improve the code.
 
 ## What features can you add?
 
-You can basically add any feature you want. There are no limitations but you have to follow some very basic rules(no bad language of any kind etc.) Any new fature, new design etc are welcome.
+You can basically add any feature you want. There are no limitations but you have to follow some very basic rules(no bad language of any kind etc.) Any new fat[forks-shield]: https://img.shields.io/github/forks/porfanid/QuestMatch.svg?style=for-the-badge
+[forks-url]: https://github.com/porfanid/QuestMatch/network/members
+[stars-shield]: https://img.shields.io/github/stars/porfanid/QuestMatch.svg?style=for-the-badge
+[stars-url]: https://github.com/porfanid/QuestMatch/stargazers
+ure, new design etc are welcome.
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/porfanid/QuestMatch.svg?style=for-the-badge
+
+[contributors-url]: https://github.com/porfanid/QuestMatch/graphs/contributors
+
+[issues-shield]: https://img.shields.io/github/issues/porfanid/QuestMatch.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+
+[license-shield]: https://img.shields.io/github/license/porfanid/QuestMatch.svg?style=for-the-badge
+[license-url]: https://github.com/porfanid/QuestMatch/blob/master/LICENSE.md
+
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Vue-url]: https://vuejs.org/
+
+[Node.js]: https://img.shields.io/badge/Node.js-35495E?style=for-the-badge&logo=nodedotjs&logoColor=4FC08D
+[Node-url]: https://nodejs.org/ 
