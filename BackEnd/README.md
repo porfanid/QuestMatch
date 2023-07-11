@@ -1,6 +1,6 @@
 # QuestMatch
 
-[<img src="images/pleasedonate.png" alt="Donate" width="100">](https://revolut.me/pavlosorfanidis)
+[<img src="../images/pleasedonate.png" alt="Donate" width="100">](https://revolut.me/pavlosorfanidis)
 
 ## BackEnd
 
