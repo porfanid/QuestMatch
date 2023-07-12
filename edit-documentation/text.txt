@@ -1,0 +1,15 @@
+# QuestMatch documentation
+
+This is a simple webpage designed to easily deploy documentation to github using docusaurus
+
+## How to edit the documentation?
+
+1. You edit the markdown files found in folder ./QuestMatch/docs
+    You can add any file you want. If you add folders, the framework will create a central menu entry and multiple submenus in the side menu.
+1. You can see how the documentation will look like by pressing 
+```bash
+npm start
+```
+This will start the app in ```http://localhost:3000``` From there you will be able to view the changes you make in real time. The framework will be converting the markdown text into html and display it on a website.
+
+3. When you do git commit, there is a github workflow that will build the pages and deploy them to the correct folder so that the github pages will be edited accordingly without any further need for you to do anything
