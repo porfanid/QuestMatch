@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkquest_match=self.webpackChunkquest_match||[]).push([[2073],{4273:e=>{e.exports=JSON.parse('{"label":"hello","permalink":"/QuestMatch/blog/tags/hello","allTagsPath":"/QuestMatch/blog/tags","count":2}')}}]);
