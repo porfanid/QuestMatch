@@ -35,3 +35,21 @@ jobs:
           projectId: questmatch2023
           channelId: live
           entryPoint: "./FrontEnd"
+      
+      
+      
+      - name: Create Deployment
+        uses: tjenkinson/create-deployment@v2
+        with:
+          environment: production
+          ref: ${{ github.sha }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      
+      - name: Create Deployment Status
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          body: |
+            Deployment to Firebase Hosting successful!
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
