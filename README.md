@@ -1,5 +1,5 @@
 # QuestMatch
-![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20Vue.js%20App/badge.svg) &nbsp;![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg) &nbsp;![Firebase Status](https://img.shields.io/badge/Firebase-Active-brightgreen.svg)
+![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20React%20App/badge.svg) &nbsp;![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg) &nbsp;![Firebase Status](https://img.shields.io/badge/Firebase-Active-brightgreen.svg)
 
 ![Answer the call](images/QuestMatch.png)
 
@@ -16,7 +16,7 @@
 Welcome to QuestMatch, an app that will be used to create matches for DnD(Dungeons and Dragons) campaigns.
 
 > **Warning:** This app is under development and is not yet online. You can contribute to it and as soon as there is some development, I will upload it.
-
+React
 ## Steps to use the app
 
 ### User registration

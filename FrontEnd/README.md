@@ -1,6 +1,6 @@
 # QuestMatch
 
-![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20Vue.js%20App/badge.svg)&nbsp;![Firebase Status](https://img.shields.io/badge/Firebase-Active-brightgreen.svg)
+![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20React%20App/badge.svg)&nbsp;![Firebase Status](https://img.shields.io/badge/Firebase-Active-brightgreen.svg)
 
 ![License](https://img.shields.io/github/license/porfanid/QuestMatch)  ![Node.js Version](https://img.shields.io/badge/Node.js-18.16.0-brightgreen.svg)  ![npm Version](https://img.shields.io/badge/npm-9.6.6-red.svg)
 

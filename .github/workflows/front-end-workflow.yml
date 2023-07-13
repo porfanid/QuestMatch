@@ -1,4 +1,4 @@
-name: Build and Deploy Vue.js App
+name: Build and Deploy React App
 
 on:
   push:
