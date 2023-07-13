@@ -28,5 +28,5 @@ You can contributee by developing the features I want the app to have, plus add 
 
 ### Programming Language
 
-The programming language that will be used for the front end will be vue js.
+The programming language that will be used for the front end will be react js.
 This is because the app needs to be real time and quite fast for people to be able to operate it as fast as possible

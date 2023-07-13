@@ -38,6 +38,7 @@ Welcome to QuestMatch, an app that will be used to create matches for DnD(Dungeo
     2. Green for the players
 2. There will be a group chat that will be used by the players to be able to contact with each other.
 
+## How to contribute
 
 ## Programming languages that will be used
 
@@ -66,19 +67,22 @@ Nodejs as this is the programming language formally suportd by Google to create 
 2. Front End:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![Vue][Vue.js]][Vue-url]
+[![React][React.js]][React-url]
 
-Vuejs as it is simple and can be used to create a real time application.
+Reactjs as it is simple and can be used to create a real time application. Also, it has a number of apps you can use to generate easier the code. SO, it will be easier if we use this jvascript framework.
 
 Please write clean code and insert comments so that other users can see what you have been doing and continue to improve the code.
 
 ## What features can you add?
 
-You can basically add any feature you want. There are no limitations but you have to follow some very basic rules(no bad language of any kind etc.) Any new fat[forks-shield]: https://img.shields.io/github/forks/porfanid/QuestMatch.svg?style=for-the-badge
+You can basically add any feature you want. There are no limitations but you have to follow some very basic rules(no bad language of any kind etc.) Any new fature, new design etc are welcome.
+
+
+[forks-shield]: https://img.shields.io/github/forks/porfanid/QuestMatch.svg?style=for-the-badge
 [forks-url]: https://github.com/porfanid/QuestMatch/network/members
 [stars-shield]: https://img.shields.io/github/stars/porfanid/QuestMatch.svg?style=for-the-badge
 [stars-url]: https://github.com/porfanid/QuestMatch/stargazers
-ure, new design etc are welcome.
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -93,8 +97,8 @@ ure, new design etc are welcome.
 [license-shield]: https://img.shields.io/github/license/porfanid/QuestMatch.svg?style=for-the-badge
 [license-url]: https://github.com/porfanid/QuestMatch/blob/master/LICENSE.md
 
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
+[React.js]: https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge
+[React-url]: https://react.dev/
 
 [Node.js]: https://img.shields.io/badge/Node.js-35495E?style=for-the-badge&logo=nodedotjs&logoColor=4FC08D
 [Node-url]: https://nodejs.org/ 
