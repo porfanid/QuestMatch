@@ -19,7 +19,12 @@ fs.readdir(destinationDir, (err, files) => {
 
   for (const file of files) {
     fs.unlink(path.join(destinationDir, file), (err) => {
-      if (err) throw err;
+      if (err){
+        console.log("you will have to manually delete everything in the docs folder in the git top level directory and run the command:");
+        console.log("node copy_to_docs.js");
+        throw err;
+        
+        }
     });
   }
 });

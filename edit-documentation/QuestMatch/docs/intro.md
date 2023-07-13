@@ -4,44 +4,62 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Let's discover **QuestMatch in less than 5 minutes**.
 
 ## Getting Started
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Get started by **going to the [GitHub project page](https://github.com/porfanid/QuestMatch)**.
 
 ### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
+- [Node.js](https://nodejs.org/en/download/) version 18.16.0 or above:
   - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
 
-## Generate a new site
+- [npm](https://www.npmjs.com/) version 9.6.6 or above
 
-Generate a new Docusaurus site using the **classic template**.
+- [webstorm](https://www.jetbrains.com/webstorm/):
+    I would recommend the community edition because it is free but it does not really matter
 
-The classic template will automatically be added to your project after you run the command:
+### Implement new feature
 
+Implement a new QuestMatch Feature from the issues
+
+The issue tracker on GitHub has the number of features that I want to see implemented on the app. You can select any of these based on a number of criteria:
+
+- Whether you prefer front-end or back-end
+- Whether you are a new or exxperienced programmer
+- Whether you want to see a specific feature implemented
+
+
+## Front End
+
+### Suggesting a new a feature
+
+My only request is that you create an issue for any specific feature you want to implement, in which you will describe the details and how you will implement it so that the rest of the contributors can view and hopefully help you implement this faster
+
+
+### Start the site
+
+Using the Webstorm IDE it is really easy to run the site. First, you have to open a terminal within the folder FrontEnd/front-end and type the command
 ```bash
-npm init docusaurus@latest my-website classic
+npm install
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Then you just open the IDE and you navigate to the folder FrontEnd/front-end, which is a webstorm project. You can then make your changes and see them by pressing the green arrow on the top right of the IDE.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Using the specific IDE is not necessary. You can use whichever IDE or editor you want.
 
-## Start your site
+### New developers
 
-Run the development server:
+New developers, those who have no prior experience with the react.js(myself included), are welcomed in this project.
 
-```bash
-cd my-website
-npm run start
-```
+I would recommend that they start by solving the issues labeled: "good first issue" as they are the easiest to solve/implement and leve the rest for the more experienced prorammers. This is not a strict rule. I just recommend it so that each feature can get actually implemented wwithout much struggle. If someone thinks they are up for the challenge, of course they are more than welcome to try it.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Back End
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+### Add an endpoint
+
+You can add any endpoint that is being described in the issues. You should add one endpoint with each commit so that it will be easier for me to check on what endpoints have been added and be able to change the issues accordingly.
+
+The back end is a simple express app with firebase integration, so that it will be both easy for everyone to implement new end points and to be easy for me to host it for free on Firebase, my primary hosting platform.

@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Answer the call',
+    Svg: require('@site/static/img/d20.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        This page was created so that we can create this project from the ground up. By writing code for either the front end or the back end, one can contribute to make this app more attrective ant we can ultimately use this app to make the dream of having an app where one can meet and chat with DND groups better.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'What makes this app different from all the others?',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        By creating this app rom scratch we can focus solely on this purpose. The app will be specifically designed so that people can meet with each other and talk about DND. Ultimately, they will create groups that can be used for playing DND, either online or in person.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Powered by View.js',
+    Svg: require('@site/static/img/vuejs.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The app front end is being powered by View.js. This javascript framework will enable the developers to create a real time application that the user can interact with effortlessly. This will vastly improve the user experience.
       </>
     ),
   },

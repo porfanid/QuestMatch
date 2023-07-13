@@ -40,6 +40,8 @@ Welcome to QuestMatch, an app that will be used to create matches for DnD(Dungeo
 
 ## How to contribute
 
+### Please read the documentation available [here](https://porfanid.github.io/QuestMatch)
+
 ## Programming languages that will be used
 
 
