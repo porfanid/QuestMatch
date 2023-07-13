@@ -40,14 +40,14 @@ jobs:
       
       - name: Create Deployment
         id: create_deployment
-        uses: actions/create-deployment@v2
+        uses: altinukshini/deployment-action@v1.2.6
         with:
           environment: firebase
           ref: ${{ github.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Deployment Status
-        uses: actions/create-deployment-status@v2
+        uses: altinukshini/deployment-action@v1.2.6
         with:
           deployment_id: ${{ steps.create_deployment.outputs.deployment_id }}
           state: success
