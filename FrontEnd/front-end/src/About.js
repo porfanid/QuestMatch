@@ -1,8 +1,6 @@
 import "./App.css";
 import logo from "./logo.svg";
-import {Routes, Route, Outlet} from "react-router-dom";
-import About1 from "./About1";
-import About2 from "./About2";
+import {Outlet} from "react-router-dom";
 function Home() {
     return (
         <div className="App">
