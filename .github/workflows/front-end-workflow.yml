@@ -35,19 +35,3 @@ jobs:
           projectId: questmatch2023
           channelId: live
           entryPoint: "./FrontEnd"
-      
-      
-      
-      - name: Create Deployment
-        id: create_deployment
-        uses: github/deployments@v2
-        with:
-          environment: firebase
-          ref: ${{ github.sha }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create Deployment Status
-        uses: github/deployments/status@v2
-        with:
-          deployment_id: ${{ steps.create_deployment.outputs.deployment_id }}
-          state: success
