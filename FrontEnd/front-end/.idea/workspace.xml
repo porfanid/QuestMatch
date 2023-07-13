@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="002a4be8-574a-4f23-9107-ea232a60dfbb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.github/workflows/front-end-workflow.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.github/workflows/front-end-workflow.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/About.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1689234091321</updated>
       <workItem from="1689234092515" duration="138000" />
-      <workItem from="1689234365863" duration="2928000" />
+      <workItem from="1689234365863" duration="3075000" />
     </task>
     <servers />
   </component>
