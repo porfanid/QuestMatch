@@ -68,7 +68,7 @@ Nodejs as this is the programming language formally suportd by Google to create 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![React][React.js]][React-url]
 
-Reactjs as it is simple and can be used to create a real time application. Also, it has a number of apps you can use to generate easier the code. SO, it will be easier if we use this jvascript framework.
+ReactJS is simple and can be used to create a real-time application. It additionally has a number of external apps you can use to generate the code easier. Therefore, it will be beneficial to use this JavaScript Framework.
 
 Please write clean code and insert comments so that other users can see what you have been doing and continue to improve the code.
 
