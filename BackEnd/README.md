@@ -18,3 +18,8 @@ These are functions that will be used to create the back end of the server. This
 
 The programming language that will be used for the back end will be node js and an express server.
 This is because nodejs is compatible with firebase and it has the easiest implementation.
+
+### Assign the issue to yourself
+```
+A very important action when deciding to implement a new feature is to assign the issue you want to work on to yourself so that the contributors do not contribute to the same feature
+```

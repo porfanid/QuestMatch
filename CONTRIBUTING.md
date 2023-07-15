@@ -12,7 +12,7 @@ Thank you for considering contributing to our project! We appreciate your time a
 - [Contact](#contact)
 
 ## How to Contribute <a name="how-to-contribute"></a>
-
+1. Assign the issue you want to implement to yourself
 1. Fork the repository and create a new branch for your contributions.
 2. Make necessary changes and improvements in your branch.
 3. Ensure that your changes adhere to the code standards and guidelines outlined in this document.

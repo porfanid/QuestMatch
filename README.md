@@ -76,6 +76,11 @@ Please write clean code and insert comments so that other users can see what you
 
 You can basically add any feature you want. There are no limitations but you have to follow some very basic rules(no bad language of any kind etc.) Any new fature, new design etc are welcome.
 
+### Assign the issue to yourself
+```
+A very important action when deciding to implement a new feature is to assign the issue you want to work on to yourself so that the contributors do not contribute to the same feature
+```
+
 
 [forks-shield]: https://img.shields.io/github/forks/porfanid/QuestMatch.svg?style=for-the-badge
 [forks-url]: https://github.com/porfanid/QuestMatch/network/members

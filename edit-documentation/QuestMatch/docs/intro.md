@@ -20,6 +20,10 @@ Get started by **going to the [GitHub project page](https://github.com/porfanid/
 - [webstorm](https://www.jetbrains.com/webstorm/):
     I would recommend the community edition because it is free but it does not really matter
 
+### Assign the issue to yourself
+```
+A very important action when deciding to implement a new feature is to assign the issue you want to work on to yourself so that the contributors do not contribute to the same feature
+```
 ### Implement new feature
 
 Implement a new QuestMatch Feature from the issues
