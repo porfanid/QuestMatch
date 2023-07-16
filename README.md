@@ -34,7 +34,7 @@ React
 
 1. When the party is created, next to each user there will be the role that each user has and different color based on the role.
     Suggestion:
-    2. Red for the Dungeon Master
+    1. Red for the Dungeon Master
     2. Green for the players
 2. There will be a group chat that will be used by the players to be able to contact with each other.
 
