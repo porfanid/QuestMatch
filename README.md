@@ -88,12 +88,6 @@ A very important action when deciding to implement a new feature is to **assign 
 
 
 
-### Social posts
-
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7086049085807374336" allowfullscreen="" title="Embedded post" width="504" height="undefined" frameborder="0"></iframe>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I created an open source web app that will help all the people who play Dungeons and Dragons to connect and start campaigns<br><br>Please contribute to make it the best.<a href="https://twitter.com/hashtag/reactjs?src=hash&amp;ref_src=twsrc%5Etfw">#reactjs</a> <a href="https://twitter.com/hashtag/nodejs?src=hash&amp;ref_src=twsrc%5Etfw">#nodejs</a> <a href="https://twitter.com/hashtag/dungeonsanddragons?src=hash&amp;ref_src=twsrc%5Etfw">#dungeonsanddragons</a> <a href="https://twitter.com/hashtag/opensource?src=hash&amp;ref_src=twsrc%5Etfw">#opensource</a> <a href="https://twitter.com/hashtag/programming?src=hash&amp;ref_src=twsrc%5Etfw">#programming</a> <a href="https://twitter.com/hashtag/contribute?src=hash&amp;ref_src=twsrc%5Etfw">#contribute</a> <a href="https://twitter.com/hashtag/QuestMatch?src=hash&amp;ref_src=twsrc%5Etfw">#QuestMatch</a> <a href="https://twitter.com/hashtag/DND?src=hash&amp;ref_src=twsrc%5Etfw">#DND</a><a href="https://t.co/FhxzDgXcjK">https://t.co/FhxzDgXcjK</a></p>&mdash; Paul Orfanidis (@paul_porfanid) <a href="https://twitter.com/paul_porfanid/status/1680246744884432896?ref_src=twsrc%5Etfw">July 15, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
 
 
 [forks-shield]: https://img.shields.io/github/forks/porfanid/QuestMatch.svg?style=for-the-badge
