@@ -1,5 +1,5 @@
 # QuestMatch
-![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20React%20App/badge.svg) &nbsp;![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg) &nbsp;![Firebase Status](https://img.shields.io/badge/Firebase-Active-brightgreen.svg)
+![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20React%20App/badge.svg) &nbsp;![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg) &nbsp;![Firebase](https://cronitor.io/badges/S2uGzv/production/x-aY2El7vpdgO4kdLpDcY_I8m6A.svg)
 
 ![Answer the call](images/QuestMatch.png)
 
