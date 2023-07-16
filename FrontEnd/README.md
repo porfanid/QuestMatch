@@ -26,10 +26,13 @@ The front end is the website that the users will use to connect to this network.
 
 You can contributee by developing the features I want the app to have, plus add any features you think you would like to see in an app like that. (Please do not use bad language).
 
-### Assign the issue to yourself
-```
-A very important action when deciding to implement a new feature is to assign the issue you want to work on to yourself so that the contributors do not contribute to the same feature
-```
+<div align="center">
+
+## ⚠️ Important: Assigning Issues
+
+A very important action when deciding to implement a new feature is to **assign the issue you want to work on to yourself**. This helps prevent multiple contributors from working on the same feature simultaneously.
+
+</div>
 
 ### Programming Language
 
