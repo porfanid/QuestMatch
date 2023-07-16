@@ -13,6 +13,7 @@ const destinationDir = path.join(top_level_path, 'docs');
 
 /**
  * Emptying directory
+ * TODO: Fix this part of code. The directory is not emptying automatically
  */
 fs.readdir(destinationDir, (err, files) => {
   if (err) throw err;
@@ -28,7 +29,20 @@ fs.readdir(destinationDir, (err, files) => {
     });
   }
 });
+/**
+ * End of emptying the directory
+ */
 
+
+// Copy the specified files from ./.github/ to ./docs
+const copyFiles = ["README.md"];
+copyFiles.forEach((file) => {
+  const sourcePath = path.join(sourceDir, file);
+  const destinationPath = path.join(destinationDir, file);
+  fs.copyFileSync(sourcePath, destinationPath);
+  console.log(`Copied ${file} to ${destinationPath}`);
+});
+// End of copying the specified files from ./github to ./docs
 
 // Copy all files from ./edit-documentation/QuestMatch/build to ./docs
 const buildDir = path.join(top_level_path, 'edit-documentation', 'QuestMatch', 'build');
@@ -42,4 +56,4 @@ fs.readdirSync(buildDir).forEach((file) => {
     });
   console.log(`Copied ${file} to ${destinationPath}`);
 });
-
+// End of Copy all files from ./edit-documentation/QuestMatch/build to ./docs
