@@ -24,7 +24,7 @@ React
 1. The user registers for an account(we will be using firebase authentication for that)
 1. The user verifies his email and registers successfully
 1. The user logs in, updates his profile and he can see other users based on their profile.(we will use firebase database to read and update the user profile)
-    2. He can enter wether he wants to be a player, a DM or both.
+    1. He can enter wether he wants to be a player, a DM or both.
     2. He can update his name, email, password etc.
 1. The user sends messages to other users nd he can create a party for other people to join.
     2. He can also block and/or report users
