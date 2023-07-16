@@ -6,7 +6,7 @@ const path = require('path');
 
 const top_level_path="../../";
 
-const sourceDir = path.join(top_level_path, '.github');
+const sourceDir = path.join(".", 'back_up_docs');
 const destinationDir = path.join(top_level_path, 'docs');
 
 
@@ -34,7 +34,7 @@ fs.readdir(destinationDir, (err, files) => {
  */
 
 
-// Copy the specified files from ./.github/ to ./docs
+// Copy the specified files from ./back_up_docs/ to ./docs
 const copyFiles = ["README.md"];
 copyFiles.forEach((file) => {
   const sourcePath = path.join(sourceDir, file);
@@ -42,7 +42,7 @@ copyFiles.forEach((file) => {
   fs.copyFileSync(sourcePath, destinationPath);
   console.log(`Copied ${file} to ${destinationPath}`);
 });
-// End of copying the specified files from ./github to ./docs
+// End of copying the specified files from ./back_up_docs/ to ./docs
 
 // Copy all files from ./edit-documentation/QuestMatch/build to ./docs
 const buildDir = path.join(top_level_path, 'edit-documentation', 'QuestMatch', 'build');
