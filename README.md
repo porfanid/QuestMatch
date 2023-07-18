@@ -13,19 +13,19 @@
 
 &nbsp;&nbsp;&nbsp;
 
-Welcome to QuestMatch, an app that will be used to create matches for DnD(Dungeons and Dragons) campaigns.
+Welcome to QuestMatch, an app that will be used to create matches for D&D (Dungeons and Dragons) campaigns.
 
 > **Warning:** This app is under development and is not yet online. You can contribute to it and as soon as there is some development, I will upload it.
-React
+
 ## Steps to use the app
 
 ### User registration
 
 1. The user registers for an account(we will be using firebase authentication for that)
-1. The user verifies his email and registers successfully
-1. The user logs in, updates his profile and he can see other users based on their profile.(we will use firebase database to read and update the user profile)
+1. The user verifies their email and registers successfully
+1. The user logs in, updates their profile and he can see other users based on their profile.(we will use firebase database to read and update the user profile)
     1. He can enter whether he wants to be a player, a DM or both.
-    2. He can update his name, email, password etc.
+    2. He can update their name, email, password etc.
 1. The user sends messages to other users and he can create a party for other people to join.
     2. He can also block and/or report users
 
