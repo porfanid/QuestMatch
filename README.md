@@ -24,9 +24,9 @@ React
 1. The user registers for an account(we will be using firebase authentication for that)
 1. The user verifies his email and registers successfully
 1. The user logs in, updates his profile and he can see other users based on their profile.(we will use firebase database to read and update the user profile)
-    1. He can enter wether he wants to be a player, a DM or both.
+    1. He can enter whether he wants to be a player, a DM or both.
     2. He can update his name, email, password etc.
-1. The user sends messages to other users nd he can create a party for other people to join.
+1. The user sends messages to other users and he can create a party for other people to join.
     2. He can also block and/or report users
 
 
@@ -54,14 +54,14 @@ React
 * [![JQuery][JQuery.com]][JQuery-url]
 -->
 
-Since I will be using firebase to host the app, the front end will be madde using firebase hosting and the backend using firebase functions.
+Since I will be using firebase to host the app, the front end will be made using firebase hosting and the backend using firebase functions.
 
 1. Back End:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Node][Node.js]][Node-url]
 
-Nodejs as this is the programming language formally suportd by Google to create firebase functions.
+Nodejs as this is the programming language formally suported by Google to create firebase functions.
 
 2. Front End:
 
@@ -74,7 +74,7 @@ Please write clean code and insert comments so that other users can see what you
 
 ## What features can you add?
 
-You can basically add any feature you want. There are no limitations but you have to follow some very basic rules(no bad language of any kind etc.) Any new fature, new design etc are welcome.
+You can basically add any feature you want. There are no limitations but you have to follow some very basic rules(no bad language of any kind etc.) Any new feature, new design etc are welcome.
 
 &nbsp;
 
