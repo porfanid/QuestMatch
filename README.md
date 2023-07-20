@@ -15,6 +15,11 @@
 
 Welcome to QuestMatch, an app that will be used to create matches for D&D (Dungeons and Dragons) campaigns.
 
+Please join our Discord server community
+
+[![Discord server](https://discordapp.com/api/guilds/1130512537738285227/widget.png?style=banner4)](https://discord.gg/pwwc3sKJ8x)
+
+
 > **Warning:** This app is under development and is not yet online. You can contribute to it and as soon as there is some development, I will upload it.
 
 ## Steps to use the app
