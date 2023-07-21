@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import github from '@site/static/img/GitHub-logo.png'
 
 const FeatureList = [
   {
@@ -22,11 +23,29 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Powered by View.js',
-    Svg: require('@site/static/img/vuejs.svg').default,
+    title: 'Powered by React.js',
+    Svg: require('@site/static/img/ReactLogo.svg').default,
     description: (
       <>
-        The app front end is being powered by View.js. This javascript framework will enable the developers to create a real time application that the user can interact with effortlessly. This will vastly improve the user experience.
+        The app front end is being powered by React.js. This javascript framework will enable the developers to create a real time application that the user can interact with effortlessly. This will vastly improve the user experience.
+      </>
+    ),
+  },
+  {
+    title: 'Discord Server',
+    Svg: require('@site/static/img/discord.svg').default,
+    description: (
+      <>
+        <iframe src="https://discord.com/widget?id=1130512537738285227&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </>
+    ),
+  },
+  {
+    title: 'GitHub Repo',
+    Svg: require('@site/static/img/github.svg').default,
+    description: (
+      <>
+        <a href="https://github.com/porfanid/QuestMatch"><img src={github}/></a>
       </>
     ),
   },

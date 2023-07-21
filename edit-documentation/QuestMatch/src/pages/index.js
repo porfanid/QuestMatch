@@ -20,12 +20,11 @@ function HomepageHeader() {
             to="/docs/intro">
             QuestMatch Tutorial - 5min ⏱️
           </Link>
+          
         </div>
       </div>
-      
-      <section>
-    <iframe src="https://discord.com/widget?id=1130512537738285227&theme=dark" width="350" height="310" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </section>
+    
+    
     </header>
   );
 }
