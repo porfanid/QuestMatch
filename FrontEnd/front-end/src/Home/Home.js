@@ -1,11 +1,12 @@
 import "../App.css";
 import image from "./dnd-quests.webp";
+import banner from "./QuestMatch.png";
 
 function Home() {
     return (
         <>
             <div className="jumbotron">
-                <img src="QuestMatch.png" alt="QuestMatch Banner" className="img-fluid"/>
+                <img src={banner} alt="QuestMatch Banner" className="img-fluid"/>
                     <h1 className="display-4">QuestMatch</h1>
                     <p className="lead">
                         QuestMatch is a platform designed to connect people who share an interest in
