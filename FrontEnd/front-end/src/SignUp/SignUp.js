@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from 'firebase/auth';
 import { auth } from '../firebase/firebase';
 
 const Signup = () => {
-    const navigate = useNavigate();
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -16,7 +15,7 @@ const Signup = () => {
         e.preventDefault();
 
         try {
-            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            await createUserWithEmailAndPassword(auth, email, password);
             // Signed up successfully, send email verification
             await sendEmailVerification(auth.currentUser);
             console.log('Verification email sent.');
