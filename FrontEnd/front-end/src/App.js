@@ -5,6 +5,8 @@ import About1 from "./About1";
 import About2 from "./About2";
 import Contribute from "./Contribute/contribute";
 import Login from "./LogIn/LogIn";
+import UserProfile from "./User/UserProfile";
+import Signup from "./SignUp/SignUp";
 function App() {
   return (
       <Router>
@@ -35,7 +37,8 @@ function App() {
           <Route exact path="/" element={<Home/>} />
           <Route exact path="contribute" element={<Contribute/>} />
           <Route exact path="login" element={<Login/>} />
-
+          <Route exact path="signup" element={<Signup/>} />
+          <Route exact path="profile/:userid" element={<UserProfile/>}/>
           <Route path="about" element={<About/>} >
               <Route path="" element={<About1/>} />
               <Route path="about" element={<About2/>} />
