@@ -1,13 +1,41 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './Home';
+import {BrowserRouter as Router, Routes, Route, NavLink, Link} from "react-router-dom";
+import Home from './Home/Home';
 import About from "./About";
 import About1 from "./About1";
 import About2 from "./About2";
+import Contribute from "./Contribute/contribute";
+import Login from "./LogIn/LogIn";
 function App() {
   return (
       <Router>
+      <>
+          <header>
+              <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+                  <Link className="navbar-brand navbar-light" to="/">QuestMatch</Link>
+                  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span className="navbar-toggler-icon"></span>
+                  </button>
+                  <div className="collapse navbar-collapse" id="navbarNav">
+                      <ul className="navbar-nav">
+                          <li className="nav-item">
+                              <NavLink to="/" className="nav-link" end>Home</NavLink>
+                          </li>
+                          <li className="nav-item">
+                              <NavLink exact to="/contribute" className="nav-link">Contribute</NavLink>
+                          </li>
+                      </ul>
+                  </div>
+                  <Link to="/login" className="btn btn-primary ml-auto">Login</Link>
+              </nav>
+          </header>
+
+
       <Routes>
           <Route exact path="/" element={<Home/>} />
+          <Route exact path="contribute" element={<Contribute/>} />
+          <Route exact path="login" element={<Login/>} />
+
           <Route path="about" element={<About/>} >
               <Route path="" element={<About1/>} />
               <Route path="about" element={<About2/>} />
@@ -17,6 +45,9 @@ function App() {
           </Route>
           {/* Add more routes as needed */}
       </Routes>
+
+
+      </>
       </Router>
   );
 }

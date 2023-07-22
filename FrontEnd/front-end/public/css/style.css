@@ -1,0 +1,101 @@
+/* Custom CSS for QuestMatch - Dark Theme */
+
+/* Background color */
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Make the text color in the navbar white */
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+/* Jumbotron styles */
+.jumbotron {
+  background-color: #292929;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+}
+
+/* Card styles */
+.card {
+  background-color: #292929;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.2rem;
+}
+
+/* Section styles */
+section {
+  margin-top: 3rem;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+section p {
+  font-size: 1.2rem;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #404040;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #b3b3b3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .jumbotron {
+    padding: 1.5rem;
+  }
+
+  .jumbotron h1 {
+    font-size: 2.5rem;
+  }
+
+  .jumbotron p {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+

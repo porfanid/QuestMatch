@@ -1,13 +1,13 @@
-import "./App.css";
-import logo from "./logo.svg";
+import logo from "../logo.svg";
+import {Outlet} from "react-router-dom";
 
-function Home() {
+function Login() {
     return (
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>
-                    Edit <code>src/App.js</code> and save to reload.
+                    <Outlet/>
                 </p>
                 <a
                     className="App-link"
@@ -22,4 +22,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Login;

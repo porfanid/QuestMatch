@@ -1,0 +1,34 @@
+.contribute-section {
+    padding: 50px;
+}
+
+.contribute-card {
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contribute-card .card-body {
+    padding: 20px;
+}
+
+.contribute-card i {
+    font-size: 36px;
+    color: #007bff;
+}
+
+.contribute-card h4 {
+    font-weight: 600;
+}
+
+.contribute-card p {
+    margin-bottom: 0;
+}
+
+.contribute-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contribute-card a:hover {
+    text-decoration: underline;
+}
