@@ -1,4 +1,3 @@
-import logo from "../logo.svg";
 import "./style.css";
 function Contribute() {
     return (
