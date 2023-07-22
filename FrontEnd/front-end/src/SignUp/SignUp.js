@@ -14,7 +14,7 @@ const Signup = () => {
         e.preventDefault();
 
         try {
-            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            await createUserWithEmailAndPassword(auth, email, password);
             // Signed up successfully, send email verification
             await sendEmailVerification(auth.currentUser);
             console.log('Verification email sent.');
