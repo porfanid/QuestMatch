@@ -35,6 +35,7 @@ const config = {
   presets: [
     [
       'classic',
+      
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -43,6 +44,10 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/porfanid/QuestMatch/tree/main/edit-documentation/QuestMatch',
+        },
+        gtag: {
+          trackingID: 'G-5QNW0G5VME',
+          anonymizeIP: true,
         },
         blog: {
           showReadingTime: true,
