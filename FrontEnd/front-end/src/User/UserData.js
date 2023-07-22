@@ -1,9 +1,4 @@
 const User={
-    porfanid: {
-        username: "porfanid",
-        name: "Pavlos",
-        email: "pavlos@orfanidis.net.gr"
-    },
     test: {
         username: "Test",
         name: "Test Test",

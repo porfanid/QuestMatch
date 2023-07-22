@@ -10,6 +10,7 @@ firebase-debug.*.log*
 # Firebase cache
 .firebase/
 questmatch2023-firebase-adminsdk-rv9z7-7c7daca330.json
+firebase.json
 # Firebase config
 
 # Uncomment this if you'd like others to create their own Firebase project.
