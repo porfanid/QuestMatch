@@ -7,7 +7,20 @@ import Contribute from "./Contribute/contribute";
 import Login from "./LogIn/LogIn";
 import UserProfile from "./User/UserProfile";
 import Signup from "./SignUp/SignUp";
+import {useEffect, useState} from "react";
+
+const test=(isLoggedIn)=>{if(isLoggedIn) {
+    return (<Link to="/logout" className="btn btn-primary ml-auto">Logout</Link>);
+}
+else{ return (<Link to="/login" className="btn btn-primary ml-auto">Login</Link>);
+}}
+
 function App() {
+
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+    useEffect(() => {
+        setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
+    }, []);
   return (
       <Router>
       <>
@@ -28,7 +41,10 @@ function App() {
                           </li>
                       </ul>
                   </div>
-                  <Link to="/login" className="btn btn-primary ml-auto">Login</Link>
+                  {
+                    test(isLoggedIn)
+                  }
+
               </nav>
           </header>
 
@@ -36,7 +52,7 @@ function App() {
       <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route exact path="contribute" element={<Contribute/>} />
-          <Route exact path="login" element={<Login/>} />
+          <Route exact path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route exact path="signup" element={<Signup/>} />
           <Route exact path="profile/:userid" element={<UserProfile/>}/>
           <Route path="about" element={<About/>} >

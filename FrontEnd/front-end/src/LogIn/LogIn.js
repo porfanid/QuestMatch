@@ -1,12 +1,10 @@
-import logo from "../logo.svg";
-import {NavLink, Outlet, useNavigate} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { auth } from '../firebase/firebase';
 import React, {useState} from 'react';
-import * as events from "events";
 
 
-function Login() {
+function Login({ setIsLoggedIn }) {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -22,7 +20,9 @@ function Login() {
                     setErrorMessage('Please verify your email before logging in.');
                     return;
                 }
-                navigate("/home")
+                localStorage.setItem('isLoggedIn', 'true');
+                setIsLoggedIn(true);
+                navigate("/home");
                 console.log(user);
             })
             .catch((error) => {
@@ -33,6 +33,10 @@ function Login() {
             });
     }
 
+    if(localStorage.getItem('isLoggedIn')==='true'){
+        navigate('/home');
+        return;
+    }
 
     return (
         <main className="py-5">
