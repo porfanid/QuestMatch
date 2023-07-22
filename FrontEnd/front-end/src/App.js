@@ -5,7 +5,7 @@ import About1 from "./About1";
 import About2 from "./About2";
 import Contribute from "./Contribute/contribute";
 import Login from "./LogIn/LogIn";
-import UserProfile from "./User/UserProfile";
+import Profile from "./User/UserProfile";
 import Signup from "./SignUp/SignUp";
 import {useEffect, useState} from "react";
 
@@ -54,7 +54,7 @@ function App() {
           <Route exact path="contribute" element={<Contribute/>} />
           <Route exact path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route exact path="signup" element={<Signup/>} />
-          <Route exact path="profile/:userid" element={<UserProfile/>}/>
+          <Route exact path="profile/" element={<Profile/>}/>
           <Route path="about" element={<About/>} >
               <Route path="" element={<About1/>} />
               <Route path="about" element={<About2/>} />

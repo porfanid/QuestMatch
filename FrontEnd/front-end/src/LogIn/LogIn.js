@@ -1,7 +1,7 @@
-import {NavLink, useNavigate} from "react-router-dom";
-import {  signInWithEmailAndPassword   } from 'firebase/auth';
+import { NavLink, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase/firebase';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 
 function Login({ setIsLoggedIn }) {
@@ -20,9 +20,14 @@ function Login({ setIsLoggedIn }) {
                     setErrorMessage('Please verify your email before logging in.');
                     return;
                 }
+
+                // Save user data to local storage
                 localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('fullname', user.displayName); // Save the full name
+                localStorage.setItem('username', user.email.split('@')[0]); // Save the username
+
                 setIsLoggedIn(true);
-                navigate("/home");
+                navigate("/profile"); // Redirect to the "/profile" endpoint after login
                 console.log(user);
             })
             .catch((error) => {
@@ -33,9 +38,9 @@ function Login({ setIsLoggedIn }) {
             });
     }
 
-    if(localStorage.getItem('isLoggedIn')==='true'){
-        navigate('/home');
-        return;
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+        navigate('/profile'); // Redirect to the "/profile" endpoint if already logged in
+        return null; // Render nothing while redirecting
     }
 
     return (
@@ -81,7 +86,6 @@ function Login({ setIsLoggedIn }) {
                                     <button
                                         type="submit"
                                         className="btn btn-primary"
-
                                     >
                                         Login
                                     </button>

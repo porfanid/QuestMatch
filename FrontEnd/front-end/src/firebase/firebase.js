@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getStorage } from 'firebase/storage';
+import { getFirestore } from 'firebase/firestore';
 import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 
 const firebaseConfig = {
@@ -13,7 +15,6 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
-export const auth = getAuth(app);
 
 initializeAppCheck(app, {
     provider: new ReCaptchaV3Provider('6Lf76UQnAAAAAO4CywXFhQX16qW-TPknnyWwLVOr'),
@@ -22,4 +23,10 @@ initializeAppCheck(app, {
     // tokens as needed.
     isTokenAutoRefreshEnabled: true
 });
+
+export const auth = getAuth(app);
+export const storage = getStorage(app);
+
+export const firestore = getFirestore(app);
+
 export default app;
