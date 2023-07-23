@@ -41,7 +41,7 @@ const CharacterOptions = ({ selectClass, selectRace, setSelectedLevel }) => {
             <h1>Character Options</h1>
             <div className="row mt-4">
 
-                <div className="col-md-6">
+                <div className="col-md-4">
                     <label htmlFor="level">Select Level:</label>
                     <input
                         type="number"
@@ -51,6 +51,8 @@ const CharacterOptions = ({ selectClass, selectRace, setSelectedLevel }) => {
                         onChange={(e) => setSelectedLevel(parseInt(e.target.value))}
                     />
                 </div>
+            </div>
+            <div  className="row mt-4">
                 <div className="col-md-6">
                     <h2>Races</h2>
                     <div className="row">

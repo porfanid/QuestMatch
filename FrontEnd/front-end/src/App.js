@@ -73,6 +73,9 @@ function App() {
                           <li className="nav-item">
                               <NavLink exact to="/contribute" className="nav-link">Contribute</NavLink>
                           </li>
+                          <li className="nav-item">
+                              <NavLink exact to="/character" className="nav-link">Create Character</NavLink>
+                          </li>
                       </ul>
                   </div>
                   {

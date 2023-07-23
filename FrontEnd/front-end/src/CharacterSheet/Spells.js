@@ -20,7 +20,7 @@ const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel }) => {
         axios.get(url)
             .then(response => setSpells(response.data.results))
             .catch(error => console.error(error));
-    }, [selectedClass, selectedRace]);
+    }, [selectedClass, selectedRace, selectedLevel]);
 
     // Event handler for selecting a spell
     const handleSpellClick = (spell) => {
