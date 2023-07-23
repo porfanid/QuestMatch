@@ -23,6 +23,8 @@ function Login({ setIsLoggedIn }) {
 
                 // Save user data to local storage
                 localStorage.setItem('isLoggedIn', 'true');
+                setIsLoggedIn(true);
+                localStorage.setItem('user', JSON.stringify(user))
                 navigate("/profile"); // Redirect to the "/profile" endpoint after login
             })
             .catch((error) => {
