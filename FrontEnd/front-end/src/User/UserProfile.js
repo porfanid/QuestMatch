@@ -5,7 +5,8 @@ import {
     uploadBytesResumable
     , getDownloadURL
 } from "firebase/storage";
-import { getAuth, updateProfile } from "firebase/auth";
+// import { getAuth, updateProfile } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import {useNavigate} from "react-router-dom";
 
 const Profile = () => {
