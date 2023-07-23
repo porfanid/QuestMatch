@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route, NavLink, Link} from "react-router-dom";
+import {Routes, Route, NavLink, Link, useNavigate} from "react-router-dom";
 import Home from './Home/Home';
 import About from "./About";
 import About1 from "./About1";
@@ -12,30 +12,44 @@ import { getAuth, signOut } from "firebase/auth";
 
 
 function App() {
-    const test=(isLoggedIn)=>{if(isLoggedIn) {
-        return (<button onClick={logOut} className="btn btn-primary ml-auto">Logout</button>);
-    }
-    else{ return (<Link to="/login" className="btn btn-primary ml-auto">Login</Link>);
-    }}
+    const navigate = useNavigate();
+    const test = (isLoggedIn) => {
+        if (isLoggedIn) {
+            return (
+                <button onClick={logOut} className="btn btn-primary ml-auto">
+                    Logout
+                </button>
+            );
+        } else {
+            return (
+                <Link to="/login" className="btn btn-primary ml-auto">
+                    Login
+                </Link>
+            );
+        }
+    };
 
-    const logOut=()=>{
+    const logOut = () => {
         const auth = getAuth();
-        signOut(auth).then(() => {
-        alert("Success");
-        setIsLoggedIn(false);
-        localStorage.removeItem("isLoggedIn");
-        localStorage.removeItem("user");
-        }).catch((error) => {
-            alert("Something went wrong while signing you out: "+error);
-        });
-    }
+        signOut(auth)
+            .then(() => {
+                alert('Success');
+                setIsLoggedIn(false);
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('user');
+                navigate('/'); // Redirect to the root path ("/") after successful logout
+            })
+            .catch((error) => {
+                alert('Something went wrong while signing you out: ' + error);
+            });
+    };
 
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
     useEffect(() => {
         setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
     }, []);
   return (
-      <Router>
+
       <>
           <header>
               <nav className="navbar navbar-expand-lg navbar-light bg-dark">
@@ -80,7 +94,6 @@ function App() {
 
 
       </>
-      </Router>
   );
 }
 

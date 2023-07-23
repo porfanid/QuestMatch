@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { storage } from '../firebase/firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { getAuth, updateProfile } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
     const auth = getAuth();
     const currentUser = JSON.parse(localStorage.getItem("user"));
-    const navigate = useNavigate();
+
 
     const [username, setUsername] = useState(currentUser.email || '');
     const [fullname, setFullname] = useState(currentUser.displayName || '');
@@ -103,14 +102,6 @@ const Profile = () => {
             setUploadError('Failed to update profile picture. Please try again later.');
         }
     };
-
-
-    if (!currentUser||currentUser===null) {
-        console.log('The user has not signed in');
-        navigate('/login');
-        return;
-    }
-
 
     return (
         <main className="container mt-5">
