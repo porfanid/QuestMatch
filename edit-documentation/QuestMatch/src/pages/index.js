@@ -17,8 +17,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            QuestMatch Tutorial - 5min ⏱️
+            to="https://questmatch2023.web.app">
+            QuestMatch Production Page
           </Link>
           
         </div>
