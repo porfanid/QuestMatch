@@ -82,7 +82,7 @@ const Profile = () => {
                     try {
                         await updateProfile(auth.currentUser, { photoURL: downLoadLink });
                         localStorage.setItem("user", JSON.stringify(auth.currentUser));
-                        
+
                     }catch(e){
                         setUploadError("Failed to update the profile picture: "+e);
                         return;
