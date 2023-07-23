@@ -8,14 +8,27 @@ import Login from "./LogIn/LogIn";
 import Profile from "./User/UserProfile";
 import Signup from "./SignUp/SignUp";
 import {useEffect, useState} from "react";
+import { getAuth, signOut } from "firebase/auth";
 
-const test=(isLoggedIn)=>{if(isLoggedIn) {
-    return (<Link to="/logout" className="btn btn-primary ml-auto">Logout</Link>);
-}
-else{ return (<Link to="/login" className="btn btn-primary ml-auto">Login</Link>);
-}}
 
 function App() {
+    const test=(isLoggedIn)=>{if(isLoggedIn) {
+        return (<button onClick={logOut} className="btn btn-primary ml-auto">Logout</button>);
+    }
+    else{ return (<Link to="/login" className="btn btn-primary ml-auto">Login</Link>);
+    }}
+
+    const logOut=()=>{
+        const auth = getAuth();
+        signOut(auth).then(() => {
+        alert("Success");
+        setIsLoggedIn(false);
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("user");
+        }).catch((error) => {
+            alert("Something went wrong while signing you out: "+error);
+        });
+    }
 
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
     useEffect(() => {
@@ -42,7 +55,7 @@ function App() {
                       </ul>
                   </div>
                   {
-                    test(isLoggedIn)
+                        test(isLoggedIn)
                   }
 
               </nav>

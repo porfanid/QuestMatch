@@ -9,7 +9,7 @@ function Login({ setIsLoggedIn }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-
+    console.log("Got to login");
     const onLogin = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
@@ -41,6 +41,7 @@ function Login({ setIsLoggedIn }) {
     }
 
     return (
+
         <main className="py-5">
             <div className="container">
                 <div className="row justify-content-center">

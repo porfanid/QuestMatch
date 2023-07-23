@@ -19,7 +19,6 @@ const Profile = () => {
 
     useEffect(() => {
         setUsername(currentUser.email || '');
-        setFullname(currentUser.displayName || '');
     }, [currentUser]);
 
 
@@ -76,13 +75,14 @@ const Profile = () => {
                     try {
                         downLoadLink = await getDownloadURL(storageRef);
                         setProfilePic(downLoadLink);
-
                     }catch (e) {
                         setUploadError("Failed to get Dowload Link"+ e);
                         return;
                     }
                     try {
                         await updateProfile(auth.currentUser, { photoURL: downLoadLink });
+                        localStorage.setItem("user", JSON.stringify(auth.currentUser));
+                        
                     }catch(e){
                         setUploadError("Failed to update the profile picture: "+e);
                         return;
