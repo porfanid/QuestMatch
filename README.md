@@ -1,7 +1,7 @@
 # QuestMatch
 ![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20React%20App/badge.svg) &nbsp;![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg) &nbsp;![Firebase](https://cronitor.io/badges/S2uGzv/production/x-aY2El7vpdgO4kdLpDcY_I8m6A.svg)
 
-![Answer the call](images/QuestMatch.png)
+[![Answer the call](images/QuestMatch.png)](https://questmatch2023.web.app)
 
 &nbsp;&nbsp;&nbsp;
 
@@ -20,7 +20,7 @@ Please join our Discord server community
 [![Discord server](https://discordapp.com/api/guilds/1130512537738285227/widget.png?style=banner4)](https://discord.gg/pwwc3sKJ8x)
 
 
-> **Warning:** This app is under development and is not yet online. You can contribute to it and as soon as there is some development, I will upload it.
+> **Hosting:** This app is being hosted at [Firebase](https://questmatch2023.web.app)
 
 ## Steps to use the app
 
@@ -59,7 +59,7 @@ Please join our Discord server community
 * [![JQuery][JQuery.com]][JQuery-url]
 -->
 
-Since I will be using firebase to host the app, the front end will be made using firebase hosting and the backend using firebase functions.
+Since I will be using [Firebase](https://questmatch2023.web.app) to host the app, the front end will be made using firebase hosting and the backend using firebase functions.
 
 1. Back End:
 
