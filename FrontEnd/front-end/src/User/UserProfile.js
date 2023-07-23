@@ -41,8 +41,9 @@ const Profile = () => {
         try {
             if (currentUser) {
                 const displayName = fullname;
-                await updateProfile(currentUser, { displayName });
+                await updateProfile(auth.currentUser, { displayName });
                 toggleEditDisplayName();
+                localStorage.setItem("user", JSON.stringify(auth.currentUser));
                 alert('Display name updated successfully!');
             } else {
                 alert('No user was found');
@@ -100,46 +101,6 @@ const Profile = () => {
         } catch (error) {
             console.error('Error updating profile picture:', error);
             setUploadError('Failed to update profile picture. Please try again later.');
-        }
-    };
-
-    const saveChanges = async () => {
-        // This is the combined function to save all changes (username, display name, and profile picture).
-        try {
-            if (currentUser) {
-                // Save profile picture to Firestore
-                if (selectedFile) {
-                    const re = /(?:\.([^.]+))?$/;
-                    const ext = re.exec(selectedFile.name)[0];
-                    console.log(ext);
-                    const storageRef = ref(
-                        storage,
-                        `/profile/${currentUser.email}/profile${ext}`
-                    );
-                    let downLoadLink;
-                    try {
-                        downLoadLink = await getDownloadURL(storageRef);
-
-                    }catch(e){
-                        setUploadError("Could not get download link"+e);
-                        return;
-                    }
-
-
-                    await uploadBytesResumable(storageRef, selectedFile);
-                    await updateProfile(currentUser, { photoURL: downLoadLink });
-                }
-
-                const displayName = fullname;
-                await updateProfile(currentUser, { displayName });
-
-                alert('Changes saved successfully!');
-            } else {
-                alert('No user was found');
-            }
-        } catch (error) {
-            console.error('Error updating profile:', error);
-            setUploadError('Failed to save changes. Please try again later.');
         }
     };
 
@@ -238,12 +199,6 @@ const Profile = () => {
                                         )}
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="text-center">
-                                <button type="button" className="btn btn-primary" onClick={saveChanges}>
-                                    Save Changes
-                                </button>
                             </div>
                         </form>
 
