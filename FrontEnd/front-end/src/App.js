@@ -1,15 +1,12 @@
 import {Routes, Route, NavLink, Link, useNavigate} from "react-router-dom";
 import Home from './Home/Home';
-import About from "./About";
-import About1 from "./About1";
-import About2 from "./About2";
 import Contribute from "./Contribute/contribute";
-import Login from "./LogIn/LogIn";
+import Login from "./Authentication/LogIn/LogIn";
 import Profile from "./User/UserProfile";
-import Signup from "./SignUp/SignUp";
+import Signup from "./Authentication/SignUp/SignUp";
 import {useEffect, useState} from "react";
 import { getAuth, signOut } from "firebase/auth";
-import Character from "./CharacterSheet/Character";
+import Character from "./CharacterSheet/ClassRace";
 import Spells from "./CharacterSheet/Spells";
 
 
@@ -55,7 +52,18 @@ function App() {
     useEffect(() => {
         setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
     }, []);
-  return (
+
+    /**
+     *
+     * <Route path="about" element={<About/>} >
+     *               <Route path="" element={<About1/>} />
+     *               <Route path="about" element={<About2/>} />
+     *               <Route path="contact" element={<About2/>} />
+     *           </Route>
+     */
+
+
+    return (
 
       <>
           <header>
@@ -94,13 +102,7 @@ function App() {
           <Route exact path="profile/" element={<Profile/>}/>
           <Route exact path="character" element={<Character selectClass={setSelectedClass} selectRace={setSelectedRace} setSelectedLevel={setSelectedLevel}/>}/>
           <Route exact path="character/spells" element={<Spells selectedClass={selectedClass} selectedRace={selectedRace} selectedLevel={selectedLevel}/>}/>
-          <Route path="about" element={<About/>} >
-              <Route path="" element={<About1/>} />
-              <Route path="about" element={<About2/>} />
-              <Route path="contact" element={<About2/>} />
-          </Route>
-          <Route path="contact" element={<Home/>} >
-          </Route>
+          <Route path="contact" element={<Home/>} />
           {/* Add more routes as needed */}
       </Routes>
 

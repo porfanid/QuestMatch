@@ -49,6 +49,18 @@ function Contribute() {
                         </div>
                     </div>
                 </div>
+
+                <div className="col-md-4 mb-4">
+                    <div className="card contribute-card">
+                        <div className="card-body text-center">
+                            <i className="fas fa-book"></i>
+                            <h4>Read the instructions</h4>
+                            <p>Read the instructions provided at the GitHub pages link</p>
+                            <a href="https://porfanid.github.ioQuestMatch" target="_blank" rel="noreferrer">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
