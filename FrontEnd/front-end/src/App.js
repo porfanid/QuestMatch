@@ -9,10 +9,17 @@ import Profile from "./User/UserProfile";
 import Signup from "./SignUp/SignUp";
 import {useEffect, useState} from "react";
 import { getAuth, signOut } from "firebase/auth";
+import Character from "./CharacterSheet/Character";
+import Spells from "./CharacterSheet/Spells";
 
 
 function App() {
     const navigate = useNavigate();
+    // State to store the selected class and race
+    const [selectedClass, setSelectedClass] = useState(null);
+    const [selectedRace, setSelectedRace] = useState(null);
+    const [selectedLevel, setSelectedLevel] = useState(null);
+
     const test = (isLoggedIn) => {
         if (isLoggedIn) {
             return (
@@ -82,6 +89,8 @@ function App() {
           <Route exact path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route exact path="signup" element={<Signup/>} />
           <Route exact path="profile/" element={<Profile/>}/>
+          <Route exact path="character" element={<Character selectClass={setSelectedClass} selectRace={setSelectedRace} setSelectedLevel={setSelectedLevel}/>}/>
+          <Route exact path="character/spells" element={<Spells selectedClass={selectedClass} selectedRace={selectedRace} selectedLevel={selectedLevel}/>}/>
           <Route path="about" element={<About/>} >
               <Route path="" element={<About1/>} />
               <Route path="about" element={<About2/>} />
