@@ -23,12 +23,7 @@ function Login({ setIsLoggedIn }) {
 
                 // Save user data to local storage
                 localStorage.setItem('isLoggedIn', 'true');
-                localStorage.setItem('fullname', user.displayName); // Save the full name
-                localStorage.setItem('username', user.email.split('@')[0]); // Save the username
-
-                setIsLoggedIn(true);
                 navigate("/profile"); // Redirect to the "/profile" endpoint after login
-                console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;

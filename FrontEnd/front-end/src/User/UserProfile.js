@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { auth, storage} from '../firebase/firebase'; // Import firestore
+import { storage} from '../firebase/firebase'; // Import firestore
 import {
     ref,
     uploadBytesResumable
+    , getDownloadURL
 } from "firebase/storage";
+import { getAuth, updateProfile } from "firebase/auth";
+import {useNavigate} from "react-router-dom";
 
 const Profile = () => {
-    const { userId } = useParams();
+
+    const auth = getAuth();
     const currentUser = auth.currentUser;
+    const navigate = useNavigate();
+
+    if (!currentUser) {
+        console.log("The user has not signed in");
+        navigate("/login");
+    }
 
     const [username, setUsername] = useState('');
     const [fullname, setFullname] = useState('');
@@ -17,12 +26,12 @@ const Profile = () => {
     const [uploadError, setUploadError] = useState(null);
 
     useEffect(() => {
-        if (currentUser && currentUser.uid === userId) {
-            setUsername(currentUser.displayName || '');
-            setFullname(currentUser.metadata.fullname || '');
+        if (currentUser) {
+            setUsername(currentUser.username || '');
+            setFullname(currentUser.displayName || '');
             setProfilePic(currentUser.photoURL || null);
         }
-    }, [currentUser, userId]);
+    }, [currentUser]);
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
@@ -30,14 +39,20 @@ const Profile = () => {
     };
 
     const saveChanges = async () => {
+
+
+
         try {
             if (currentUser) {
                 // Save profile picture to Firestore
-                console.log(currentUser.email)
                 if (selectedFile) {
                     const re = /(?:\.([^.]+))?$/;
                     const ext = re.exec(selectedFile.name)[0];
                     const storageRef = ref(storage, `/profile/${currentUser.email}/profile.${ext}`);
+
+                    const downLoadLink = await getDownloadURL(storageRef);
+                    setProfilePic(downLoadLink);
+
                     //const uploadTask =
                     uploadBytesResumable(storageRef, selectedFile);
                 }else{
@@ -64,6 +79,17 @@ const Profile = () => {
                     <div className="card p-4 shadow">
                         <h2 className="text-center mb-4">Edit Profile</h2>
                         <form>
+
+                            {profilePic && (
+                                <div className="text-center mt-4">
+                                    <img
+                                        src={profilePic}
+                                        alt="Profile"
+                                        style={{ width: '100px', height: '100px', borderRadius: '50%' }}
+                                    />
+                                </div>
+                            )}
+
                             <div className="form-group">
                                 <label htmlFor="username">Username</label>
                                 <input
@@ -109,15 +135,7 @@ const Profile = () => {
                             </div>
                         )}
 
-                        {profilePic && (
-                            <div className="text-center mt-4">
-                                <img
-                                    src={profilePic}
-                                    alt="Profile"
-                                    style={{ width: '100px', height: '100px', borderRadius: '50%' }}
-                                />
-                            </div>
-                        )}
+
                     </div>
                 </div>
             </div>
