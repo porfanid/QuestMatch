@@ -1,13 +1,29 @@
-const express = require("express");
-const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 admin.initializeApp();
 
-const app = express();
+exports.deleteUnverifiedUsers = functions.pubsub
+  .schedule("every 24 hours") // Run the function daily
+  .timeZone("your-time-zone")
+  .onRun(async (context) => {
+    const currentTime = Date.now();
+    const oneWeekAgo = currentTime - 7 * 24 * 60 * 60 * 1000;
 
-app.get("/hello", (req, res) => {
-  res.send("Hello, World!");
-});
+    try {
+      const listUsersResult = await admin.auth().listUsers();
+      const unverifiedUsers = listUsersResult.users.filter(
+        (user) => !user.emailVerified && user.metadata.creationTime < oneWeekAgo
+      );
 
-exports.api = functions.https.onRequest(app);
+      console.log(`Deleting ${unverifiedUsers.length} unverified user(s).`);
 
+      // Delete the unverified users.
+      const deletePromises = unverifiedUsers.map((user) =>
+        admin.auth().deleteUser(user.uid)
+      );
+      await Promise.all(deletePromises);
+
+      console.log("Unverified users deleted successfully.");
+    } catch (error) {
+      console.error("Error deleting unverified users:", error);
+    }
+  });
