@@ -5,6 +5,8 @@ const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel }) => {
     const [spells, setSpells] = useState([]);
     const [selectedSpellIndices, setSelectedSpellIndices] = useState([]);
 
+    console.log("Selected Level is "+selectedLevel);
+
     useEffect(() => {
         // Fetch spells from the API based on selected class and race
         let url = 'https://www.dnd5eapi.co/api/spells';

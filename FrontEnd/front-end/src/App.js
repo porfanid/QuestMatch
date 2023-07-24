@@ -100,7 +100,7 @@ function App() {
           <Route exact path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route exact path="signup" element={<Signup/>} />
           <Route exact path="profile/" element={<Profile/>}/>
-          <Route exact path="character" element={<Character selectClass={setSelectedClass} selectRace={setSelectedRace} setSelectedLevel={setSelectedLevel}/>}/>
+          <Route exact path="character" element={<Character selectClass={setSelectedClass} selectRace={setSelectedRace} selectLevel={setSelectedLevel}/>}/>
           <Route exact path="character/spells" element={<Spells selectedClass={selectedClass} selectedRace={selectedRace} selectedLevel={selectedLevel}/>}/>
           <Route path="contact" element={<Home/>} />
           {/* Add more routes as needed */}
