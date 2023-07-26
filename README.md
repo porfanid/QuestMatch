@@ -17,8 +17,11 @@ Welcome to QuestMatch, an app that will be used to create matches for D&D (Dunge
 
 Please join our Discord server community
 
-[![Discord server](https://discordapp.com/api/guilds/1130512537738285227/widget.png?style=banner4)](https://discord.gg/pwwc3sKJ8x)
+[<img alt="Discord server" src="https://discordapp.com/api/guilds/1130512537738285227/widget.png?style=banner4" width="">](https://discord.gg/pwwc3sKJ8x)
 
+YouTube Video:
+
+[<img alt="QuestMatch Intro Youtube" src="https://img.youtube.com/vi/GRi2pM7J_Ic/0.jpg">](https://www.youtube.com/watch?v=GRi2pM7J_Ic)
 
 > **Hosting:** This app is being hosted at [Firebase](https://questmatch2023.web.app)
 
