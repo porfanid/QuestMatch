@@ -21,7 +21,7 @@ Please join our Discord server community
 
 YouTube Video:
 
-[<img alt="QuestMatch Intro Youtube" src="https://img.youtube.com/vi/GRi2pM7J_Ic/0.jpg">](https://www.youtube.com/watch?v=GRi2pM7J_Ic)
+[<img alt="QuestMatch Intro Youtube" src="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png">](https://www.youtube.com/watch?v=GRi2pM7J_Ic)
 
 > **Hosting:** This app is being hosted at [Firebase](https://questmatch2023.web.app)
 
