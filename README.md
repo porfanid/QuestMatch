@@ -1,5 +1,5 @@
 # QuestMatch
-![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20React%20App/badge.svg) &nbsp;![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg) &nbsp;![Firebase](https://cronitor.io/badges/S2uGzv/production/x-aY2El7vpdgO4kdLpDcY_I8m6A.svg)
+![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Build%20and%20Deploy%20React%20App/badge.svg) &nbsp;![Build and Deploy Status](https://github.com/porfanid/QuestMatch/workflows/Backend%20Deployment/badge.svg) &nbsp;![Firebase](https://cronitor.io/badges/S2uGzv/production/x-aY2El7vpdgO4kdLpDcY_I8m6A.svg)[![Open Source Helpers](https://www.codetriage.com/porfanid/questmatch/badges/users.svg)](https://www.codetriage.com/porfanid/questmatch)
 
 [![Answer the call](images/QuestMatch.png)](https://questmatch2023.web.app)
 
