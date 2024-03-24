@@ -5,6 +5,8 @@ const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel, setSelected
     const [spells, setSpells] = useState([]);
     const [selectedSpellIndices, setSelectedSpellIndices] = useState([]);
 
+    const [maxSpells, setMaxSpells]=useState(0)
+
     console.log("Selected Level is "+selectedLevel);
 
     useEffect(() => {
@@ -18,6 +20,22 @@ const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel, setSelected
         } else if (selectedRace) {
             url = `https://www.dnd5eapi.co/api/spells?races=${selectedRace.index}`;
         }
+
+        axios.get(`https://www.dnd5eapi.co/api/classes/${selectedClass.index}/levels/${selectedLevel}`).then(
+            (response)=>{
+                console.log(response.data);
+                if(response.data.spellcasting){
+                    let total = 0;
+                    for (const key in response.data.spellcasting) {
+                        if (Object.prototype.hasOwnProperty.call(response.data.spellcasting, key)) {
+                            total += response.data.spellcasting[key];
+                        }
+                    }
+                    setMaxSpells(total);
+                    console.log(total);
+                }
+            }
+        )
 
         axios.get(url)
             .then(response => setSpells(response.data.results))
@@ -33,8 +51,12 @@ const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel, setSelected
             // If the spell is already selected, remove it from the array
             setSelectedSpellIndices(prevSelectedSpellIndices => prevSelectedSpellIndices.filter(index => index !== spell.index));
         } else {
-            // If the spell is not selected, add it to the array
-            setSelectedSpellIndices(prevSelectedSpellIndices => [...prevSelectedSpellIndices, spell.index]);
+            if(selectedSpellIndices.length>=maxSpells){
+                alert("You can't choose more spells.")
+            }else {
+                // If the spell is not selected, add it to the array
+                setSelectedSpellIndices(prevSelectedSpellIndices => [...prevSelectedSpellIndices, spell.index]);
+            }
         }
         setSelectedSpells(selectedSpellIndices);
     };
@@ -44,10 +66,10 @@ const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel, setSelected
 
     return (
         <div className="container mt-5">
-            <h1>Spell Options</h1>
+            <h1>Spells</h1>
             <div className="row mt-4">
                 <div className="col-md-12">
-                    <h2>Spells</h2>
+                    <h2>{maxSpells-selectedSpellIndices.length} left</h2>
                     <div className="row">
                         {spells.map(spell => (
                             <div
