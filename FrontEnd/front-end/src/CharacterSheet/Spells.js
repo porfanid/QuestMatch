@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel }) => {
+const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel, setSelectedSpells }) => {
     const [spells, setSpells] = useState([]);
     const [selectedSpellIndices, setSelectedSpellIndices] = useState([]);
 
@@ -36,6 +36,7 @@ const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel }) => {
             // If the spell is not selected, add it to the array
             setSelectedSpellIndices(prevSelectedSpellIndices => [...prevSelectedSpellIndices, spell.index]);
         }
+        setSelectedSpells(selectedSpellIndices);
     };
 
     // Get the selected spell objects based on their indices

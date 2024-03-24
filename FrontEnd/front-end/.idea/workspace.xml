@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="002a4be8-574a-4f23-9107-ea232a60dfbb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Authentication/LogIn/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Authentication/LogIn/LogIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Authentication/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Authentication/SignUp/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CharacterSheet/Spells.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CharacterSheet/Spells.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase/firebase.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +32,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2SVaEdkF2HsMoR4UU99p2fMUUwW" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -39,7 +48,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/porfanid/programming/QuestMatch/FrontEnd/front-end/public/images&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/porfanid/programming/QuestMatch/FrontEnd/front-end&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -47,6 +57,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -92,6 +103,8 @@
       <workItem from="1690114339249" duration="12367000" />
       <workItem from="1690195795929" duration="3430000" />
       <workItem from="1690313971188" duration="261000" />
+      <workItem from="1711230385086" duration="3348000" />
+      <workItem from="1711292340261" duration="10730000" />
     </task>
     <servers />
   </component>

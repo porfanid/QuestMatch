@@ -5,9 +5,10 @@ import Login from "./Authentication/LogIn/LogIn";
 import Profile from "./User/UserProfile";
 import Signup from "./Authentication/SignUp/SignUp";
 import {useEffect, useState} from "react";
-import { getAuth, signOut } from "firebase/auth";
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 import Character from "./CharacterSheet/ClassRace";
 import Spells from "./CharacterSheet/Spells";
+import { auth } from './firebase/firebase';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     const [selectedClass, setSelectedClass] = useState(null);
     const [selectedRace, setSelectedRace] = useState(null);
     const [selectedLevel, setSelectedLevel] = useState(null);
+    const [selectedSpells, setSelectedSpells] = useState(null);
 
     const test = (isLoggedIn) => {
         if (isLoggedIn) {
@@ -50,6 +52,18 @@ function App() {
 
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
     useEffect(() => {
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                //const discordUsername = user.customClaims.discordUsername;
+                //console.log(`GitHub username: ${discordUsername}`);
+                setIsLoggedIn(true);
+            } else {
+                console.log('No user signed in');
+                setIsLoggedIn(false);
+            }
+        });
+
         setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
     }, []);
 
@@ -101,7 +115,8 @@ function App() {
           <Route exact path="signup" element={<Signup/>} />
           <Route exact path="profile/" element={<Profile/>}/>
           <Route exact path="character" element={<Character selectClass={setSelectedClass} selectRace={setSelectedRace} selectLevel={setSelectedLevel}/>}/>
-          <Route exact path="character/spells" element={<Spells selectedClass={selectedClass} selectedRace={selectedRace} selectedLevel={selectedLevel}/>}/>
+          <Route exact path="character/spells" element={<Spells setSelectedSpells={setSelectedSpells} selectedClass={selectedClass} selectedRace={selectedRace} selectedLevel={selectedLevel}/>}/>
+          <Route exact path="character/equipment" element={<Spells selectedClass={selectedClass} selectedRace={selectedRace} selectedLevel={selectedLevel}/>}/>
           <Route path="contact" element={<Home/>} />
           {/* Add more routes as needed */}
       </Routes>

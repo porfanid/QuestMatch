@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from 'firebase/auth';
-import { auth } from '../../firebase/firebase';
+import {auth, firestore} from '../../firebase/firebase';
+import { collection, doc, setDoc } from "firebase/firestore";
 
-const Signup = () => {
+const Signup = (reference, data) => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [repeatPassword, setRepeatPassword] = useState('');
     const [error, setError] = useState('');
     const [verificationSent, setVerificationSent] = useState(false);
+    const [discord, setDiscord] = useState('');
 
     const onSubmit = async (e) => {
         e.preventDefault();
 
         try {
+            if(password!==repeatPassword){
+                throw new Error("The passwords do not match");
+            }
             await createUserWithEmailAndPassword(auth, email, password);
             // Signed up successfully, send email verification
             await sendEmailVerification(auth.currentUser);
@@ -24,6 +30,16 @@ const Signup = () => {
             await updateProfile(auth.currentUser, {
                 displayName: name
             });
+
+            try {
+                await setDoc(doc(firestore,"users",auth.currentUser.email), {
+                    "discord": discord
+                });
+                console.log("Document written with ID: ");
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+
 
             setVerificationSent(true);
         } catch (error) {
@@ -77,6 +93,31 @@ const Signup = () => {
                                         />
                                     </div>
 
+                                    <div className="form-group">
+                                        <label htmlFor="password">Repeat Password</label>
+                                        <input
+                                            type="password"
+                                            className="form-control"
+                                            value={repeatPassword}
+                                            onChange={(e) => setRepeatPassword(e.target.value)}
+                                            required
+                                            placeholder="Repeat Password"
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label htmlFor="password">Discord Username</label>
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            value={discord}
+                                            onChange={(e) => setDiscord(e.target.value)}
+                                            required
+                                            placeholder="Discord Username"
+                                        />
+                                        <span className={"text-muted"}>This app relies on Discord to create the groups. You can register for a free Discord account <a href={"https://discord.com/"} target={"_blank"} rel={"noreferrer"}>here</a></span>
+                                    </div>
+
                                     <button type="submit" className="btn btn-primary btn-block" onClick={onSubmit}>
                                         Sign up
                                     </button>
@@ -95,7 +136,7 @@ const Signup = () => {
                                 )}
 
                                 <p className="mt-3 text-center">
-                                    Already have an account?{' '}
+                                Already have an account?{' '}
                                     <NavLink to="/login">
                                         Sign in
                                     </NavLink>

@@ -1,24 +1,48 @@
 import React, { useState, useEffect } from 'react';
-import { storage } from '../firebase/firebase';
+import {auth, firestore, storage} from '../firebase/firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { getAuth, updateProfile } from 'firebase/auth';
+import {getAuth, onAuthStateChanged, updateProfile} from 'firebase/auth';
+import {useNavigate} from "react-router-dom";
+import {doc, getDoc, updateDoc} from "firebase/firestore";
 
 const Profile = () => {
     const auth = getAuth();
-    const currentUser = JSON.parse(localStorage.getItem("user"));
+    const navigate = useNavigate();
+    const [currentUser, setCurrentUser] = useState(null);
 
 
-    const [username, setUsername] = useState(currentUser.email || '');
-    const [fullname, setFullname] = useState(currentUser.displayName || '');
+    const [username, setUsername] = useState('');
+    const [fullname, setFullname] = useState('');
     const [selectedFile, setSelectedFile] = useState(null);
-    const [profilePic, setProfilePic] = useState(currentUser.photoURL || null);
+    const [profilePic, setProfilePic] = useState(null);
+    const [discord, setDiscord] = useState(null);
     const [isEditingDisplayName, setIsEditingDisplayName] = useState(false);
     const [isEditingProfilePicture, setIsEditingProfilePicture] = useState(false);
+    const [isEditingDiscord, setIsEditingDiscord] = useState(false);
     const [uploadError, setUploadError] = useState(null);
 
     useEffect(() => {
-        setUsername(currentUser.email || '');
-    }, [currentUser]);
+
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                //const discordUsername = user.customClaims.discordUsername;
+                //console.log(`GitHub username: ${discordUsername}`);
+                setUsername(user.email || '');
+                setFullname(user.displayName);
+                setProfilePic(user.photoURL);
+                const docSnap = await getDoc(doc(firestore, "users", auth.currentUser.email));
+                if(docSnap.exists()){
+                    setDiscord(docSnap.data().discord)
+                }else{
+                    console.log("document was not found")
+                }
+                setCurrentUser(user);
+            } else {
+                console.log('No user signed in');
+                navigate("/login");
+            }
+        });
+    }, []);
 
 
 
@@ -36,13 +60,23 @@ const Profile = () => {
         setIsEditingProfilePicture((prevState) => !prevState);
     };
 
+    const toggleEditDiscord = () => {
+        setIsEditingDiscord((prevState) => !prevState);
+    };
+
+    const saveDiscord = async () => {
+        await updateDoc(doc(firestore,"users",currentUser.email), {
+            "discord": discord
+        });
+        toggleEditDiscord();
+    }
+
     const saveDisplayName = async () => {
         try {
             if (currentUser) {
                 const displayName = fullname;
                 await updateProfile(auth.currentUser, { displayName });
                 toggleEditDisplayName();
-                localStorage.setItem("user", JSON.stringify(auth.currentUser));
                 alert('Display name updated successfully!');
             } else {
                 alert('No user was found');
@@ -66,6 +100,7 @@ const Profile = () => {
 
 
                     try {
+                        setUploadError(null)
                         await uploadBytesResumable(storageRef, selectedFile);
                     }catch{
                         setUploadError("Failed to upload file");
@@ -81,7 +116,6 @@ const Profile = () => {
                     }
                     try {
                         await updateProfile(auth.currentUser, { photoURL: downLoadLink });
-                        localStorage.setItem("user", JSON.stringify(auth.currentUser));
 
                     }catch(e){
                         setUploadError("Failed to update the profile picture: "+e);
@@ -117,16 +151,16 @@ const Profile = () => {
                                         <img
                                             src={profilePic}
                                             alt="Profile"
-                                            style={{ width: '100px', height: '100px', borderRadius: '50%' }}
+                                            style={{width: '100px', height: '100px', borderRadius: '50%'}}
                                         />
                                     )}
-                                    <input
-                                        type="file"
-                                        className="form-control-file"
-                                        accept="image/*"
-                                        onChange={handleFileChange}
-                                        disabled={!isEditingProfilePicture}
-                                    />
+                                    {isEditingProfilePicture &&
+                                        <input
+                                            type="file"
+                                            className="form-control-file"
+                                            accept="image/*"
+                                            onChange={handleFileChange}
+                                        />}
                                     <div className="input-group-append">
                                         <button
                                             type="button"
@@ -191,6 +225,43 @@ const Profile = () => {
                                     </div>
                                 </div>
                             </div>
+
+
+
+
+                            <div className="form-group">
+                                <label htmlFor="fullname">Discord</label>
+                                <div className="input-group">
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        value={discord}
+                                        onChange={(e) => setDiscord(e.target.value)}
+                                        readOnly={!isEditingDiscord}
+                                        required
+                                    />
+                                    <div className="input-group-append">
+                                        <button
+                                            type="button"
+                                            className={`btn ${isEditingDiscord ? 'btn-secondary' : 'btn-primary'}`}
+                                            onClick={toggleEditDiscord}
+                                        >
+                                            {isEditingDiscord ? 'Cancel' : 'Edit'}
+                                        </button>
+                                        {isEditingDiscord && (
+                                            <button
+                                                type="button"
+                                                className="btn btn-success"
+                                                onClick={saveDiscord}
+                                            >
+                                                Save
+                                            </button>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </form>
 
                         {uploadError && (
@@ -202,7 +273,8 @@ const Profile = () => {
                 </div>
             </div>
         </main>
-    );
+    )
+        ;
 };
 
 export default Profile;
