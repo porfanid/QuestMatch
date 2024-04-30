@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {auth, firestore, storage} from '../firebase/firebase';
+import {firestore, storage} from '../firebase/firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import {getAuth, onAuthStateChanged, updateProfile} from 'firebase/auth';
 import {useNavigate} from "react-router-dom";

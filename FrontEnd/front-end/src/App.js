@@ -18,7 +18,7 @@ function App() {
     const [selectedClass, setSelectedClass] = useState(null);
     const [selectedRace, setSelectedRace] = useState(null);
     const [selectedLevel, setSelectedLevel] = useState(null);
-    const [selectedSpells, setSelectedSpells] = useState(null);
+    const [ setSelectedSpells] = useState(null);
 
     const test = (isLoggedIn) => {
         if (isLoggedIn) {
