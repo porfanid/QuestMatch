@@ -66,7 +66,7 @@ function App() {
         });
 
         setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
-    }, []);
+    }, [navigate]);
 
     /**
      *

@@ -42,7 +42,7 @@ const Profile = () => {
                 navigate("/login");
             }
         });
-    }, []);
+    },  [auth, navigate]);
 
 
 
