@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Modal, Button } from 'react-bootstrap';
+import {useNavigate} from "react-router-dom";
 
 const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel, setSelectedSpells }) => {
     const [spells, setSpells] = useState([]);
     const [selectedSpellIndices, setSelectedSpellIndices] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [selectedSpellInfo, setSelectedSpellInfo] = useState(null);
+
+    const navigate=useNavigate();
 
     const components={
         "V":"Verbal",
@@ -104,13 +107,19 @@ const SpellsOptions = ({ selectedClass, selectedRace, selectedLevel, setSelected
                         </ul>
                     </div>
                 )}
+                <button onClick={() => {
+                    navigate("/character/equipment");
+                }} className="btn btn-primary btn-large">Submit
+                </button>
             </div>
             <Modal show={showModal} onHide={() => setShowModal(false)}>
                 <Modal.Header className="bg-dark">
                     <Modal.Title>
-                        <h3 className={"text-primary"}>{selectedSpellInfo && selectedSpellInfo.name}</h3><br/>
-                        {selectedSpellInfo && selectedSpellInfo.ritual && <span className={"text-warning"}>Ritual</span>}
-                        <span className={"text-info"}>Range: {selectedSpellInfo && selectedSpellInfo.range}</span>
+                    <h3 className={"text-primary"}>{selectedSpellInfo && selectedSpellInfo.name}</h3><br/>
+                        {selectedSpellInfo && selectedSpellInfo.ritual &&
+                            <span className={"text-warning"}>Ritual</span>}
+                        <span className={"text-info"}>Range: {selectedSpellInfo && selectedSpellInfo.range}</span><br/>
+                        <span className={"text-info"}>Duration: {selectedSpellInfo && selectedSpellInfo.duration}</span>
                     </Modal.Title>
 
 

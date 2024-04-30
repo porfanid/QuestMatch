@@ -9,6 +9,7 @@ import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 import Character from "./CharacterSheet/ClassRace";
 import Spells from "./CharacterSheet/Spells";
 import { auth } from './firebase/firebase';
+import Equipment from "./CharacterSheet/Equipment";
 
 
 function App() {
@@ -116,7 +117,7 @@ function App() {
           <Route exact path="profile/" element={<Profile/>}/>
           <Route exact path="character" element={<Character selectClass={setSelectedClass} selectRace={setSelectedRace} selectLevel={setSelectedLevel}/>}/>
           <Route exact path="character/spells" element={<Spells setSelectedSpells={setSelectedSpells} selectedClass={selectedClass} selectedRace={selectedRace} selectedLevel={selectedLevel}/>}/>
-          <Route exact path="character/equipment" element={<Spells selectedClass={selectedClass} selectedRace={selectedRace} selectedLevel={selectedLevel}/>}/>
+          <Route exact path="character/equipment" element={<Equipment/>}/>
           <Route path="contact" element={<Home/>} />
           {/* Add more routes as needed */}
       </Routes>
