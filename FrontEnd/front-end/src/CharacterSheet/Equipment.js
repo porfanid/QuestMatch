@@ -168,7 +168,7 @@ export default function Equipment(){
                             </div>
                             }
 
-                            {selectedEquipment.desc[0] &&
+                            {selectedEquipment.desc&&selectedEquipment.desc[0] &&
                                 <div>
                                     <span className={"text-info"}>Description:</span><br/> {selectedEquipment.desc[0]}
                                 </div>
